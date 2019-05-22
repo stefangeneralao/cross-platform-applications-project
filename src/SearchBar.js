@@ -4,7 +4,7 @@ import axios from 'axios';
 const udURL = 'http://api.urbandictionary.com/v0/define?term=';
 
 function SearchBar({ setResults }) {
-  const [ value, setValue ] = useState('');
+  const [ value, setValue ] = useState('burrito');
   
   function onSubmitHandler(event) {
     event.preventDefault();

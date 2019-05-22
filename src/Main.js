@@ -9,6 +9,7 @@ function Main({ results }) {
       <Card
         key={ i }
         text={ result.definition }
+        title={ result.word }
       />
     );
   })
