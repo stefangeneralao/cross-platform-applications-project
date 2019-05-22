@@ -6,13 +6,25 @@ import Main from './Main.js';
 
 function App() {
   const [ results, setResults ] = useState([]);
+  const [ liked, setLiked ] = useState([]);
+  
+  const setLikedHandler = (title, text) => {
+    setLiked([
+      ...liked,
+      { title, text }
+    ]);
+  };
   
   return (
     <div className="App">
       <Header />
       <SearchBar setResults={ setResults } />
       {/* <Menu /> */}
-      <Main results={ results } />
+      <Main
+        results={ results }
+        setLiked={ setLikedHandler }
+        liked={ liked }
+      />
     </div>
   );
 }
