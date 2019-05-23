@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Header.js';
 import SearchBar from './SearchBar.js';
@@ -9,11 +9,20 @@ function App() {
   const [ liked, setLiked ] = useState([]);
   
   const setLikedHandler = (title, text) => {
-    setLiked([
+    const newLiked = [
       ...liked,
       { title, text }
-    ]);
+    ];
+    setLiked(newLiked);
+    localStorage.setItem('liked', JSON.stringify(newLiked));
   };
+
+  useEffect(() => {
+    const lsLiked = JSON.parse(localStorage.getItem('liked'));
+    if (lsLiked) {
+      setLiked(lsLiked);
+    }
+  }, [liked]);
   
   return (
     <div className="App">
