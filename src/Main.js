@@ -3,14 +3,14 @@ import { Route } from 'react-router-dom';
 import HomePage from './HomePage';
 import LikedPage from './LikedPage';
 
-function Main({ results, setLiked, liked }) {
+function Main({ results, setLiked, liked, setResults }) {
   
   return (
     <div className="main">
       <Route
         path="/"
         exact
-        render={ () => <HomePage results={ results } setLiked={ setLiked }/> }
+        render={ () => <HomePage results={ results } setLiked={ setLiked } setResults={setResults}/>}
       />
       <Route
         path="/liked"

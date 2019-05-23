@@ -1,7 +1,8 @@
 import React from 'react';
 import Card from './Card';
+import SearchBar from './SearchBar.js';
 
-function HomePage({ results, setLiked }) {
+function HomePage({ results, setLiked, setResults }) {
   const resultCards = results.map((result, i) => {
     return (
       <Card
@@ -15,6 +16,7 @@ function HomePage({ results, setLiked }) {
   
   return (
     <div className="home-page">
+      <SearchBar setResults={ setResults } />
       { resultCards }
     </div>
   );
