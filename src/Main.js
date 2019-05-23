@@ -6,16 +6,6 @@ import LikedPage from './LikedPage';
 
 function Main({ results, setLiked, liked }) {
   
-  const likedCards = liked.map((like, i) => {
-    return (
-      <Card
-        key={ i }
-        text={ like.text }
-        title={ like.title }
-      />
-    );
-  })
-  
   return (
     <div className="main">
       <Route
@@ -26,7 +16,7 @@ function Main({ results, setLiked, liked }) {
       <Route
         path="/liked"
         exact
-        component={ () => <LikedPage likedCards={ likedCards } /> }
+        component={ () => <LikedPage liked={ liked } /> }
       />
     </div>
   );
