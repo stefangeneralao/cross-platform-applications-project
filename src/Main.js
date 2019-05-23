@@ -5,19 +5,6 @@ import HomePage from './HomePage';
 import LikedPage from './LikedPage';
 
 function Main({ results, setLiked, liked }) {
-  const resultCards = results.map((result, i) => {
-    return (
-      <Card
-        key={ i }
-        text={ result.definition }
-        title={ result.word }
-        setLiked={ setLiked }
-      />
-    );
-  });
-
-  console.log('liked', liked);
-  console.log('results', results);
   
   const likedCards = liked.map((like, i) => {
     return (
@@ -34,7 +21,7 @@ function Main({ results, setLiked, liked }) {
       <Route
         path="/"
         exact
-        render={ () => <HomePage resultCards={ resultCards } /> }
+        render={ () => <HomePage results={ results } setLiked={ setLiked }/> }
       />
       <Route
         path="/liked"
