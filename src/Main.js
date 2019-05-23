@@ -1,5 +1,4 @@
 import React from 'react';
-import Card from './Card';
 import { Route } from 'react-router-dom';
 import HomePage from './HomePage';
 import LikedPage from './LikedPage';
