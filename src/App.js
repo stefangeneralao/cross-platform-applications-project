@@ -16,12 +16,16 @@ function App() {
     localStorage.setItem('liked', JSON.stringify(newLiked));
   };
 
+  const removeLiked = (title, text) => {
+    console.log('removing', title);
+  }
+
   useEffect(() => {
     const lsLiked = JSON.parse(localStorage.getItem('liked'));
     if (lsLiked) {
       setLiked(lsLiked);
     }
-  }, [liked]);
+  }, []);
   
   return (
     <div className="App">
@@ -32,6 +36,7 @@ function App() {
         setLiked={ setLikedHandler }
         liked={ liked }
         setResults={setResults}
+        removeLiked={ removeLiked }
       />
     </div>
   );

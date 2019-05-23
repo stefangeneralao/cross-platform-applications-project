@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import SearchBar from './SearchBar.js';
 
-function HomePage({ results, setLiked, setResults }) {
+function HomePage({ results, setLiked, setResults, removeLiked }) {
   const resultCards = results.map((result, i) => {
     return (
       <Card
@@ -10,6 +10,7 @@ function HomePage({ results, setLiked, setResults }) {
         text={ result.definition }
         title={ result.word }
         setLiked={ setLiked }
+        removeLiked={ removeLiked }
       />
     );
   });

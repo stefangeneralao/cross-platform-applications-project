@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import HomePage from './HomePage';
 import LikedPage from './LikedPage';
 
-function Main({ results, setLiked, liked, setResults }) {
+function Main({ results, setLiked, liked, setResults, removeLiked }) {
   
   return (
     <div className="main">
@@ -15,7 +15,7 @@ function Main({ results, setLiked, liked, setResults }) {
       <Route
         path="/liked"
         exact
-        component={ () => <LikedPage liked={ liked } /> }
+        component={ () => <LikedPage liked={ liked } removeLiked={ removeLiked }/> }
       />
     </div>
   );
