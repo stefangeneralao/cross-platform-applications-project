@@ -14,6 +14,16 @@ function App() {
     ];
     setLiked(newLiked);
     localStorage.setItem('liked', JSON.stringify(newLiked));
+
+    console.log('results', results);
+    const newResults = [];
+    for (let i = 0; i < results.length; i++) {
+      const result = results[i];
+      if (!(result.word === title && result.definition === text)) {
+        newResults.push(result);
+      }
+    }
+    setResults(newResults);
   };
 
   const removeLiked = (title, text) => {
