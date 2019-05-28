@@ -1,5 +1,5 @@
 .header {
-  background-color: blueviolet;
+  background-color: #e59c53;
   height: 100px;
   color: white;
 }
@@ -7,4 +7,17 @@
 .header h1 {
   padding-top: 25px;
   margin: 0;
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 6px;
+}
+
+.header img {
+  width: 45px;
+  float: right;
+  padding-bottom: 20px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
 }
