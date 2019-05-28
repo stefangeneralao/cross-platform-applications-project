@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './SearchBar.css';
 
 const udURL = 'http://api.urbandictionary.com/v0/define?term=';
 
@@ -21,13 +22,15 @@ function SearchBar({ setResults }) {
   }
   
   return (
-    <form onSubmit={ onSubmitHandler }>
-      <input
-        placeholder={ 'Type any word...' }
-        onChange={ onChangeHandler }
-        value={ value }
-      />
-    </form>
+    <div className="search-bar">
+      <form onSubmit={ onSubmitHandler }>
+        <input
+          placeholder={ 'Type any word...' }
+          onChange={ onChangeHandler }
+          value={ value }
+        />
+      </form>
+    </div>
   );
 }
 

@@ -1,6 +1,6 @@
 .card {
   background-color: white;
-  width: 400px;
+  max-width: 400px;
   margin: auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -9,4 +9,9 @@
 
 .card p {
   text-align: left;
+  line-height: 30px;
+}
+
+.card hr {
+  opacity: 0.2;
 }

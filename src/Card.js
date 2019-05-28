@@ -7,6 +7,7 @@ function Card({ title, text, setLiked, removeLiked }) {
   return (
     <div className="card">
       <h2>{ title }</h2>
+      <hr/>
       <p>{ text }</p>
       {
         setLiked && (
