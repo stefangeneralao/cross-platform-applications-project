@@ -17,7 +17,15 @@ function App() {
   };
 
   const removeLiked = (title, text) => {
-    console.log('removing', title);
+    console.log('liked', liked);
+    const filteredLiked = liked.filter(like => {
+      if (like.title === title && like.text === text) {
+        return false;
+      }
+      return true;
+    });
+    setLiked(filteredLiked);
+    localStorage.setItem('liked', JSON.stringify(filteredLiked));
   }
 
   useEffect(() => {
