@@ -1,3 +1,12 @@
 .like-button img {
-  width: 45px;
+  width: 40px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 30px;
+  transition: 100ms;
+}
+
+.like-button img:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: 100ms;
 }
