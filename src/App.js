@@ -18,12 +18,27 @@ function App() {
 
   const removeLiked = (title, text) => {
     console.log('liked', liked);
-    const filteredLiked = liked.filter(like => {
+    
+    // const filteredLiked = liked.filter(like => {
+    //   if (like.title === title && like.text === text) {
+    //     return false;
+    //   }
+    //   return true;
+    // });
+    
+    // const filteredLiked = liked.filter(like => (
+    //   !(like.title === title && like.text === text)
+    // ));
+    
+    const filteredLiked = [];
+    for (let i = 0; i < liked.length; i++) {
+      const like = liked[i];
       if (like.title === title && like.text === text) {
-        return false;
+      } else {
+        filteredLiked.push(like);
       }
-      return true;
-    });
+    }
+
     setLiked(filteredLiked);
     localStorage.setItem('liked', JSON.stringify(filteredLiked));
   }
