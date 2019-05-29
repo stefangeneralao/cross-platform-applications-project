@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="header">
       <Link to="/">
-        <h1>Urban [iourbän]</h1>
+        <h1>Urban [örbän]</h1>
       </Link>
       <Link to="/liked">
         <img src={ likeImg } alt="all likes" />
