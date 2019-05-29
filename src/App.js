@@ -14,8 +14,6 @@ function App() {
     ];
     setLiked(newLiked);
     localStorage.setItem('liked', JSON.stringify(newLiked));
-
-    console.log('results', results);
     const newResults = [];
     for (let i = 0; i < results.length; i++) {
       const result = results[i];
@@ -27,8 +25,6 @@ function App() {
   };
 
   const removeLiked = (title, text) => {
-    console.log('liked', liked);
-    
     const filteredLiked = [];
     for (let i = 0; i < liked.length; i++) {
       const like = liked[i];
@@ -56,7 +52,7 @@ function App() {
         results={ results }
         setLiked={ setLikedHandler }
         liked={ liked }
-        setResults={setResults}
+        setResults={ setResults }
         removeLiked={ removeLiked }
       />
     </div>
