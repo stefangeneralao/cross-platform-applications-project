@@ -4,6 +4,11 @@ import './SearchBar.css';
 
 const udURL = 'http://api.urbandictionary.com/v0/define?term=';
 
+function removeBrackets(value) {
+  const filteredValue = value.replace(/[[\]]/g, '');
+  return filteredValue;
+}
+
 function SearchBar({ setResults }) {
   const [ value, setValue ] = useState('');
   
@@ -12,8 +17,12 @@ function SearchBar({ setResults }) {
     axios.get(udURL + value)
       .then(resp => {
         const results = resp.data.list;
-        setResults(results);
-      })
+        const filteredResults = results.map(result => ({
+          ...result,
+          definition: removeBrackets(result.definition),
+        }));
+        setResults(filteredResults);
+      });
   }
   
   function onChangeHandler(event) {
