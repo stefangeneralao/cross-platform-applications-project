@@ -3,6 +3,7 @@
   left: 20px;
   right: 20px;
   top: 100px;
+  z-index: 2;
 }
 
 .search-bar input {
