@@ -6,6 +6,7 @@ import Main from './Main.js';
 function App() {
   const [ results, setResults ] = useState([]);
   const [ liked, setLiked ] = useState([]);
+  const [ isEmpty, setIsEmpty ] = useState(false);
   
   const setLikedHandler = (title, text) => {
     const newLiked = [
@@ -47,13 +48,14 @@ function App() {
   return (
     <div className="App">
       <Header />
-       {/* <Menu /> */}
       <Main
         results={ results }
         setLiked={ setLikedHandler }
         liked={ liked }
         setResults={ setResults }
         removeLiked={ removeLiked }
+        setIsEmpty={ setIsEmpty }
+        isEmpty={ isEmpty }
       />
     </div>
   );

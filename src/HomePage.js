@@ -1,8 +1,9 @@
 import React from 'react';
 import Card from './Card';
 import SearchBar from './SearchBar.js';
+import './HomePage.css';
 
-function HomePage({ results, setLiked, setResults, removeLiked }) {
+function HomePage({ results, setLiked, setResults, removeLiked, setIsEmpty, isEmpty }) {
   const resultCards = results.map((result, i) => {
     return (
       <Card
@@ -17,7 +18,10 @@ function HomePage({ results, setLiked, setResults, removeLiked }) {
   
   return (
     <div className="home-page">
-      <SearchBar setResults={ setResults } />
+      <SearchBar setResults={ setResults } setIsEmpty={ setIsEmpty }/>
+      <div className="is-empty-placeholder">
+        { isEmpty && (<p>Inga resultat</p>) }
+      </div>
       <div className="card-wrapper">
         { resultCards }
       </div>

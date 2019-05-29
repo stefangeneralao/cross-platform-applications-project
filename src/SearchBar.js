@@ -9,7 +9,7 @@ function removeBrackets(value) {
   return filteredValue;
 }
 
-function SearchBar({ setResults }) {
+function SearchBar({ setResults, setIsEmpty }) {
   const [ value, setValue ] = useState('');
   
   function onSubmitHandler(event) {
@@ -21,8 +21,13 @@ function SearchBar({ setResults }) {
           ...result,
           definition: removeBrackets(result.definition),
         }));
+        if (results.length === 0){
+          setIsEmpty(true);
+        } else {
+          setIsEmpty(false);
+        }
         setResults(filteredResults);
-      });
+      })
   }
   
   function onChangeHandler(event) {
