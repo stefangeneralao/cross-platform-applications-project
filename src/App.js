@@ -9,8 +9,8 @@ function App() {
   
   const setLikedHandler = (title, text) => {
     const newLiked = [
+      { title, text },
       ...liked,
-      { title, text }
     ];
     setLiked(newLiked);
     localStorage.setItem('liked', JSON.stringify(newLiked));
