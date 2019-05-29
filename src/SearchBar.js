@@ -5,7 +5,7 @@ import './SearchBar.css';
 const udURL = 'http://api.urbandictionary.com/v0/define?term=';
 
 function SearchBar({ setResults }) {
-  const [ value, setValue ] = useState('burrito');
+  const [ value, setValue ] = useState('');
   
   function onSubmitHandler(event) {
     event.preventDefault();
