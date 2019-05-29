@@ -3,14 +3,14 @@ import { Route } from 'react-router-dom';
 import HomePage from './HomePage';
 import LikedPage from './LikedPage';
 
-function Main({ results, setLiked, liked, setResults, removeLiked }) {
+function Main({ results, setLiked, liked, setResults, removeLiked, setIsEmpty, isEmpty }) {
   
   return (
     <div className="main">
       <Route
         path="/"
         exact
-        render={ () => <HomePage results={ results } setLiked={ setLiked } setResults={setResults}/>}
+        render={ () => <HomePage results={ results } setLiked={ setLiked } setResults={ setResults } setIsEmpty={ setIsEmpty } isEmpty={ isEmpty }/>}
       />
       <Route
         path="/liked"

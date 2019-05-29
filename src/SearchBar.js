@@ -4,7 +4,7 @@ import './SearchBar.css';
 
 const udURL = 'http://api.urbandictionary.com/v0/define?term=';
 
-function SearchBar({ setResults }) {
+function SearchBar({ setResults, setIsEmpty }) {
   const [ value, setValue ] = useState('');
   
   function onSubmitHandler(event) {
@@ -12,6 +12,11 @@ function SearchBar({ setResults }) {
     axios.get(udURL + value)
       .then(resp => {
         const results = resp.data.list;
+        if (results.length === 0){
+          setIsEmpty(true);
+        } else {
+          setIsEmpty(false)
+        }
         setResults(results);
       })
   }
