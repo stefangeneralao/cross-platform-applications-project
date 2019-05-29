@@ -18,7 +18,9 @@ function HomePage({ results, setLiked, setResults, removeLiked }) {
   return (
     <div className="home-page">
       <SearchBar setResults={ setResults } />
-      { resultCards }
+      <div className="card-wrapper">
+        { resultCards }
+      </div>
     </div>
   );
 }

@@ -1,5 +1,12 @@
+.search-bar {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  top: 100px;
+}
+
 .search-bar input {
-  width: 90vw;
+  width: 100%;
   text-align: center;
   height: 40px;
   font-size: 1rem;

@@ -1,7 +1,12 @@
 .header {
   background-color: #e59c53;
-  height: 100px;
+  height: 150px;
   color: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  user-select: none;
 }
 
 .header h1 {
@@ -21,4 +26,8 @@
   position: absolute;
   right: 30px;
   top: 30px;
+}
+
+.header.liked {
+  height: 100px;
 }

@@ -15,7 +15,9 @@ function LikedPage({ liked, removeLiked }) {
 
   return (
     <div className="liked-page">
-      { likedCards }
+      <div className="liked-wrapper">
+        { likedCards }
+      </div>
     </div>
   );
 }
