@@ -2,6 +2,8 @@ import React from 'react';
 import Card from './Card';
 import SearchBar from './SearchBar.js';
 import './HomePage.css';
+import noResultImage from './images/bugs.jpg';
+import initialImage from './images/javascript-meme.png';
 
 function HomePage({ results, setLiked, setResults, setIsEmpty, isEmpty }) {
   const resultCards = results.map((result, i) => {
@@ -15,12 +17,21 @@ function HomePage({ results, setLiked, setResults, setIsEmpty, isEmpty }) {
     );
   });
   
+  const isShowingInitialImage = !isEmpty && !results.length;
+  
   return (
     <div className="home-page">
       <SearchBar setResults={ setResults } setIsEmpty={ setIsEmpty }/>
-      <div className="is-empty-placeholder">
-        { isEmpty && (<p>Inga resultat</p>) }
-      </div>
+      { isEmpty && (
+        <div className="is-empty-placeholder">
+            <img src={ noResultImage } alt="no result"/>
+        </div>
+      ) }
+      { isShowingInitialImage && (
+        <div className="initial-image-placeholder">
+          <img src={ initialImage } alt="initial"/>
+        </div>
+      ) }
       <div className="card-wrapper">
         { resultCards }
       </div>

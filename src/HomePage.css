@@ -1,4 +1,14 @@
-.is-empty-placeholder {
-    position: relative;
-    top: 150px;
+.home-page .is-empty-placeholder, .home-page .initial-image-placeholder {
+  position: absolute;
+  top: 200px;
+  bottom: 50px;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+}
+
+.home-page .is-empty-placeholder img, .home-page .initial-image-placeholder img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }

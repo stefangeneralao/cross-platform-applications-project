@@ -1,0 +1,14 @@
+.liked-page .is-empty-placeholder {
+  position: absolute;
+  top: 150px;
+  bottom: 50px;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+}
+
+.liked-page .is-empty-placeholder img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
