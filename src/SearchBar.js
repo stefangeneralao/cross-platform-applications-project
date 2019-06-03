@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './SearchBar.css';
 
-const udURL = 'http://api.urbandictionary.com/v0/define?term=';
+const udURL = 'https://api.urbandictionary.com/v0/define?term=';
 
 function removeBrackets(value) {
   const filteredValue = value.replace(/[[\]]/g, '');
