@@ -3,7 +3,7 @@ import Card from './Card';
 import SearchBar from './SearchBar.js';
 import './HomePage.css';
 
-function HomePage({ results, setLiked, setResults, removeLiked, setIsEmpty, isEmpty }) {
+function HomePage({ results, setLiked, setResults, setIsEmpty, isEmpty }) {
   const resultCards = results.map((result, i) => {
     return (
       <Card
@@ -11,7 +11,6 @@ function HomePage({ results, setLiked, setResults, removeLiked, setIsEmpty, isEm
         text={ result.definition }
         title={ result.word }
         setLiked={ setLiked }
-        removeLiked={ removeLiked }
       />
     );
   });
