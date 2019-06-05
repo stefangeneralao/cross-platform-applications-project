@@ -1,5 +1,8 @@
 # Project in the course _Cross-platform Applications with Web Technologies_ at _Malmö University_
 
+## Demo
+Please try our project at [urban-burrito.now.sh](https://urban-burrito.now.sh).
+
 ## Pre-setup
 Make sure Node version >9 and NPM version >5 is installed by executing the following commands in terminal:
 
